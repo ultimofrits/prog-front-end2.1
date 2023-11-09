@@ -1,0 +1,42 @@
+@mixin Object($w,$h,$b,$l,$z,$bg) {
+    position: absolute;
+    content: "";
+    width: $w;
+    height: $h;
+    bottom: $b;
+    left: $l;
+    z-index: $z;
+    background: $bg;
+  }
+  
+  @mixin Transform($transforms) {
+         -moz-transform: $transforms;
+           -o-transform: $transforms;
+          -ms-transform: $transforms;
+      -webkit-transform: $transforms;
+            transform: $transforms;
+  }
+  
+  @mixin Keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content; 
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    } 
+  }
+  
+  @mixin Animation($content){
+    -webkit-animation: $content;
+      -moz-animation: $content;
+      animation: $content;
+  }
+
+  
+  
